@@ -1,0 +1,28 @@
+<!--展示楼层-->
+<div>
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <input type="button" value="位置预览" class="btn btn-success btnAdd pull-right"
+                   ng-click="pop()">
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <div class="col-xs-1 col-sm-1 col-md-1 check">
+            <span>序号</span>
+        </div>
+        <span class="col-xs-4 col-sm-4 col-md-4">图片</span>
+        <span class="col-xs-5 col-sm-5 col-md-5">链接地址/ID</span>
+        <span class="col-xs-2 col-sm-2 col-md-2">操作</span>
+    </div>
+    <div class="homeContent">
+        <div class="homeContentItem clearfix" ng-repeat="cf in CarouselFigure">
+            <div class="col-xs-1 col-sm-1 col-md-1 check">
+                <span>1</span>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4"><img src="/images/bg_home_prdcouctIcon.png" alt="">
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5">http://shop46241504036554.oomall.com</div>
+            <div class="col-xs-2 col-sm-2 col-md-2">操作</div>
+        </div>
+    </div>
+</div>

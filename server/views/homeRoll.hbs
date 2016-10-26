@@ -1,0 +1,54 @@
+<!--滚动消息-->
+<div ng-controller="homeRoll">
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <input type="button" value="添加" class="btn btn-success btnAdd pull-right" ng-click="pop()">
+            <input type="button" value="批量删除" class="btn btn-danger btnAdd pull-right" ng-click="pop()">
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input class="checks" type="checkbox">
+        </div>
+        <span class="col-xs-3 col-sm-3 col-md-3">信息内容</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">链接地址/ID</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">排序</span>
+        <span class="col-xs-2 col-sm-2 col-md-2">操作</span>
+    </div>
+    <div class="homeContent">
+        <div class="rollContentItem clearfix" ng-repeat="cf in CarouselFigure">
+            <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input type="checkbox"></div>
+            <span class="col-xs-3 col-sm-3 col-md-3">618洗衣狂欢满199减100，跨万店买3免1 全场凑单！</span>
+            <div class="col-xs-3 col-sm-3 col-md-3"><a href="http://www.oomall.com">http://www.oomall.com</a>
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-3"><span>排序</span></div>
+            <div class="col-xs-2 col-sm-2 col-md-2"><span>操作</span></div>
+        </div>
+        <div class="limitBottomNav clearfix">
+                            <span class="pull-right pageBtn"><button type="button"
+                                                                     class="btn btn-default">确定</button></span>
+            <span class="pull-right pageIn">到第<input type="text">页</span>
+            <span class="pull-right">共11页</span>
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="pull-right">共111条数据</span>
+
+        </div>
+    </div>
+</div>

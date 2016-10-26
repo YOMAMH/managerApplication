@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" id="ng-app" ng-app="koucloApp">
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎进入抠抠镇运维管理后台</title>
+    <script src="/javascripts/json2.js"></script>
+    <!–[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
+    <script src="/javascripts/json2.js"></script>
+    <script src="/javascripts/html5shiv.min.js"></script>
+    <![endif]–>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/pagination/style/pagination.css">
+    <script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular-route/angular-route.min.js"></script>
+    <script src="/pagination/js/jquery.pagination.min.js"></script>
+    <script src="/javascripts/admin/administerNav.js"></script>
+    <script src="/javascripts/admin/administerContent.js"></script>
+    <script src="/javascripts/admin/homeRoll.js"></script>
+    <script src="/javascripts/admin/homeCarousel.js"></script>
+    <script src="/javascripts/admin/businessCheck.js"></script>
+    <script src="/javascripts/admin/contentType.js"></script>
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico">
+    <link type="image/x-icon" rel="bookmark" href="/images/favicon.ico">
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="layout">
+    <!--顶部通栏-->
+    <div class="navbar navbar-inverse navbar-static-top top" id="top" ng-controller="top">
+        <div class="navbar-inner">
+            <div class="navcontainer">
+                <div class="row">
+                    <a href="javascript:void(0);" class="brand pull-left">抠抠镇APP后台管理系统</a>
+                    <a href="javascript:void(0);" class="brand pull-right" ng-click="loginOut();">退出</a>
+                    <a href="javascript:void(0);" class="brand pull-right user">{{user}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--内容主体-->
+    <div class="content clearfix">
+
+        <!--左边导航-->
+        <div class="contentLeft pull-left" ng-controller="koucloControllerLeft">
+            <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+                <!--首页-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>首页管理</i>
+                    </a>
+                    <li class=""><a ng-href="#/"><i>轮播图</i></a></li>
+                    <li class=""><a ng-href="#roll"><i>滚动消息</i></a></li>
+                    <li class=""><a ng-href="#limit"><i>限时抢购</i></a></li>
+                    <li class=""><a ng-href="#floor"><i>展示楼层</i></a></li>
+                    <li class=""><a ng-href="#competitive"><i>精品推荐</i></a></li>
+                </ul>
+
+                <!--内容管理-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>内容管理</i>
+                    </a>
+                    <li class=""><a ng-href="#search"><i>搜索推荐</i></a></li>
+                    <li class=""><a ng-href="#type"><i>类目管理</i></a></li>
+                </ul>
+
+                <!--促销管理-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>促销管理</i>
+                    </a>
+                    <li class=""><a ng-href="#coupon"><i>优惠券</i></a></li>
+                    <li class=""><a ng-href="#code"><i>优惠码</i></a></li>
+                </ul>
+
+                <!--信息管理-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>信息管理</i>
+                    </a>
+                    <li role="presentation" class=""><a ng-href="#ad" role="tab" data-toggle="tab" aria-controls="home"><i>商家广告</i></a>
+                    </li>
+                    <li role="presentation" class=""><a ng-href="#upDate" role="tab" data-toggle="tab"
+                                                        aria-controls="home"><i>版本更新</i></a></li>
+                    <li role="presentation" class=""><a ng-href="#Aftermarket" role="tab" data-toggle="tab"
+                                                        aria-controls="home"><i>售后反馈</i></a></li>
+                </ul>
+
+                <!--商品监控-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>商品监控</i>
+                    </a>
+                    <li role="presentation" class=""><a ng-href="#Sensitive" role="tab" data-toggle="tab"
+                                                        aria-controls="home"><i>敏感词管理</i></a></li>
+                    <li role="presentation" class=""><a ng-href="#PP" role="tab" data-toggle="tab" aria-controls="home"><i>商品处理</i></a>
+                    </li>
+                </ul>
+
+                <!--商家审核-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>商家审核</i>
+                    </a>
+                    <li class=""><a ng-href="#MR"><i>商家审核</i></a>
+                    </li>
+                </ul>
+
+                <!--财务管理-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>财务管理</i>
+                    </a>
+                    <li role="presentation" class="active"><a ng-href="#MR" role="tab" data-toggle="tab"
+                                                              aria-controls="home"><i>商家审核</i></a></li>
+                </ul>
+
+                <!--账户管理-->
+                <ul class="nav nav-tabs" role="tablist">
+                    <a class="navBtn" href="javascript:void (0);">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <i>账户管理</i>
+                    </a>
+                    <li role="presentation" class=""><a ng-href="#Competence" role="tab" data-toggle="tab"
+                                                        aria-controls="home"><i>权限管理</i></a></li>
+                    <li role="presentation" class=""><a ng-href="#PI" role="tab" data-toggle="tab" aria-controls="home"><i>个人资料</i></a>
+                    </li>
+                    <li role="presentation" class=""><a ng-href="#modifyPwd" role="tab" data-toggle="tab"
+                                                        aria-controls="home"><i>修改密码</i></a></li>
+                </ul>
+
+
+            </div>
+        </div>
+        <!--右边内容-->
+        <div class="contentRight pull-left" ng-controller="koucloControllerRight" ng-view></div>
+    </div>
+
+    <!--底部通栏-->
+    <div class="navbar navbar-inverse navbar-static-top top bottom">
+        <div class="navbar-inner">
+            <div class="navcontainer">
+                <div class="row">
+                    <h5>CopyRIGHT @ 2009-2014 抠抠网 KOUCLO All RIGHTS RESERVED 闽ICP备13001618号-5</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!--类目管理-->
+<link rel="stylesheet" href="/stylesheets/content.css">
+<div class="contentManage">
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <button class="btn btn-success  pull-right" ng-click="addClass()" id="addClassOne">添加一级分类</button>
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <span class="col-xs-5 col-sm-5 col-md-5">类目列表</span>
+        <span class="col-xs-2 col-sm-2 col-md-2">分类ID</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">功能按钮</span>
+        <span class="col-xs-2 col-sm-2 col-md-2">操作</span>
+    </div>
+    <div class="homeContent clearfix" id="typeConent">
+        <div class="typeContentItem">
+            <div ng-repeat="className in classItems" ng-class="setClass(className.type);">
+                <!--一级类目-->
+                <div class="typeContentOne clearfix">
+                    <div class="clearfix">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                                        <span class="glyphicon glyphicon-menu-hamburger tag"><span
+                                                class="oneClassTittle" ng-bind="className.name"></span></span>
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2"><span ng-bind="className.sortId"></span></div>
+                        <div class="col-xs-3 col-sm-3 col-md-3"><input type="button" style="margin: 0 auto"
+                                                                       value="添加二级分类"
+                                                                       class="btn btn-success btnClassAdd btnClassAddTwo">
+                        </div>
+                        <div class="col-xs-2 col-sm-2 col-md-2">
+                            <a href="javascript:void(0);" ng-bind="setText(className.type);"></a>
+                            <a href="javascript:void(0);">编辑</a>
+                            <a href="javascript:void(0);">删除</a>
+                        </div>
+                    </div>
+                    <!--二级类目-->
+                    <div class="typeContentTwo clearfix" ng-repeat="typeTwo in className.typeTwo" ng-class="setClass(typeTwo.type)">
+
+                        <div class="typeContentItem clearfix">
+                            <div class="col-xs-5 col-sm-5 col-md-5 twoTitle"><span
+                                    class="glyphicon glyphicon-menu-hamburger tag"></span><span
+                                    class="oneClassTittle" ng-bind="typeTwo.name"></span></div>
+                            <div class="col-xs-2 col-sm-2 col-md-2"><span ng-bind="typeTwo.sortId"></span></div>
+                            <div class="col-xs-3 col-sm-3 col-md-3"><input type="button"
+                                                                           style="margin: 0 auto"
+                                                                           value="添加三级分类"
+                                                                           class="btn btn-success btnClassAdd btnClassAddThree">
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <a href="javascript:void(0);" ng-bind="setText(typeTwo.type);"></a>
+                                <a href="javascript:void(0);">编辑</a>
+                                <a href="javascript:void(0);">删除</a>
+                            </div>
+                        </div>
+                        <!--三级类目-->
+                        <div class="typeContentThree clearfix" ng-repeat="typeThree in typeTwo.typeThree" ng-class="setClass(typeThree.type)">
+                            <div class="col-xs-5 col-sm-5 col-md-5 threeTitle">
+                                <span class="oneClassTittle" ng-bind="typeThree.name"></span>
+                            </div>
+                            <div class="col-xs-2 col-sm-2 col-md-2"><span ng-bind="typeThree.sortId"></span></div>
+                            <div class="col-xs-3 col-sm-3 col-md-3"></div>
+                            <div class="col-xs-2 col-sm-2 col-md-2">
+                                <a href="javascript:void(0);" ng-bind="setText(typeThree.type);"></a>
+                                <a href="javascript:void(0);">编辑</a>
+                                <a href="javascript:void(0);">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--底部分页-->
+        <div class="M-box3 pull-right"></div>
+    </div>
+</div>
+<!--载入层-->
+<div class="cover clearfix">
+    <div class="lodingView">
+        <img src="/images/loding.gif" alt="">
+    </div>
+</div>

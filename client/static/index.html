@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>抠抠镇运维管理后台登陆系统</title>
+	
+	<link rel="stylesheet" type="text/css" href="/css3singoin/css/default.css">
+	
+	<!--必要样式-->
+	<link rel="stylesheet" type="text/css" href="/css3singoin/css/styles.css">
+	<link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico">
+	<link type="image/x-icon" rel="bookmark" href="/images/favicon.ico">
+	<!--[if IE]>
+		<script src="/javascripts/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+    <div class="backView"></div>
+	<div class='login'>
+	  <div class='login_title'>
+	    <h2>抠抠镇运维管理后台登陆系统</h2>
+	  </div>
+	  <div class='login_fields'>
+	    <div class='login_fields__user'>
+	      <div class='icon'>
+	        <img src='/images/user_icon_copy.png'>
+	      </div>
+	      <input placeholder='用户名' type='text' id="userName">
+	        <div class='validation'>
+	          <img src='/images/tick.png'>
+	        </div>
+	    </div>
+	    <div class='login_fields__password'>
+	      <div class='icon'>
+	        <img src='/images/lock_icon_copy.png'>
+	      </div>
+	      <input placeholder='密码' type='password' id="password">
+	      <div class='validation'>
+	        <img src='/images/tick.png'>
+	      </div>
+	    </div>
+		<div class="login_fields__msg" style="margin-top: 20px"><span></span></div>
+	    <div class='login_fields__submit'>
+	      <input type='submit' value='登录'>
+	    </div>
+	  </div>
+	  <div class='success'>
+	    <span></span>
+	    <p></p>
+	  </div>
+	  <div class='disclaimer'>
+	    <p style="color: white">欢迎使用抠抠镇运维管理后台登陆系统，请妥善保管好您的账户和密码 <br>Welcome kouclo landing system operation and maintenance management background, please take good care of your account and password</p>
+	  </div>
+	</div>
+	<div class='authent'>
+	  <img src='/images/puff.svg'>
+	  <p>认证中...</p>
+	</div>
+	
+	<script type="text/javascript" src='/css3singoin/js/stopExecutionOnTimeout.js'></script>
+	<script src="/jquery/dist/jquery.min.js"></script>
+	<script src="/css3singoin/js/jquery-ui.min.js"></script>
+	<script src="/css3singoin/js/loginCheck.js"></script>
+
+</body>
+</html>

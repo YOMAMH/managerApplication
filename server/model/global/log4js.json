@@ -1,0 +1,78 @@
+{
+  "appenders":
+  [
+    {
+      "category":"console",
+      "type":"console"
+    },
+    {
+      "category":"logs",
+      "type": "dateFile",
+      "filename": "/logs/log",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"data",
+      "type": "dateFile",
+      "filename": "/logs/data",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"database",
+      "type": "dateFile",
+      "filename": "/logs/database",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"get",
+      "type": "dateFile",
+      "filename": "/logs/get",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"post",
+      "type": "dateFile",
+      "filename": "/logs/post",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"delete",
+      "type": "dateFile",
+      "filename": "/logs/delete",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"server",
+      "type": "dateFile",
+      "filename": "/logs/server",
+      "alwaysIncludePattern": true,
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "category":"localhost",
+      "type": "file",
+      "filename": "/logs/localhost.log",
+      "alwaysIncludePattern": true,
+      "maxLogSize": 512000000,
+      "backups": 100
+    }
+  ],
+  "replaceConsole": true,
+  "levels":
+  {
+    "logs":"ALL",
+    "console":"ALL",
+    "database":"ALL",
+    "get":"ALL",
+    "post":"ALL",
+    "delete":"ALL",
+    "data":"ALL",
+    "server":"ALL"
+  }
+}

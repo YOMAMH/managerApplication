@@ -1,0 +1,273 @@
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    behavior: url(ie-css3.htc); //让ie支持css3
+width: 100%;
+    height: 100%;
+}
+
+a {
+    color: #ffffff;
+}
+
+input{
+    margin-right: 15px;
+}
+
+i{
+    font-style: normal;
+}
+
+
+.layout{
+    width: 100%;
+    height: 100%;
+    border-left:1px solid #000;
+    border-right:1px solid #000;
+    background-color: rgba(193, 195, 198,.5);
+}
+
+.ng-cloak{
+    display: none;
+}
+/*顶部通栏*/
+
+.navbar-static-top.top{
+    height: 66px;
+    background:darkorange;
+    background: linear-gradient(darkorange , green 70%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='darkorange ', endColorstr='green',GradientType=1 );
+    margin-bottom: 0;
+}
+.navbar-static-top.top.bottom{
+    background: linear-gradient(green 70%,darkorange);
+}
+.navbar-static-top.top h5{
+    color: #ffffff;
+    text-align: center;
+    line-height: 50px;
+}
+.navbar-inner .navcontainer{
+    width: 92%;
+    height: 100%;
+    margin: 0 auto;
+}
+.navbar-inner .row{
+    height: 100%;
+    margin: 0 auto;
+}
+.navbar-inner .row a{
+    line-height: 66px;
+    font-size: 16px;
+    color: #ffffff;
+}
+.navbar-inner .row a:hover{
+    text-decoration: none;
+}
+.navbar-inner .row .user{
+    margin-right: 35px;
+}
+/*顶部通栏END*/
+
+/*内容主体左*/
+.content {
+    width: 100%;
+    min-height: 800px;
+    margin: 0 auto;
+}
+.contentLeft .nav-tabs > li.active > a:hover{
+    cursor: pointer;
+}
+.contentLeft{
+    width: 12%;
+    height: 100%;
+    border-right:2px solid #C1C3C6;
+    padding-top: 5px;
+    background-color: #ffffff;
+}
+
+.bs-example-tabs >.nav-tabs{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+.bs-example-tabs >.nav-tabs>a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+.bs-example-tabs >.nav-tabs>a>span{
+    position: absolute;
+}
+.bs-example-tabs >.nav-tabs>a>i{
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    transition: all .5s;
+}
+.bs-example-tabs > .nav-tabs:hover{
+    -webkit-box-shadow: inset 0 0 5px #5C6BC0;
+    -moz-box-shadow: inset 0 0 5px #5C6BC0;
+    box-shadow: inset 0 0 5px #5C6BC0;
+}
+.bs-example-tabs > .nav-tabs>a>i:hover{
+    -webkit-text-shadow: -3px 3px 5px #5C6BC0;
+    -moz-text-shadow: -3px 3px 5px #5C6BC0;
+    -ms-text-shadow:-3px 3px 5px #5C6BC0;
+    -o-text-shadow: -3px 3px 5px #5C6BC0;
+    text-shadow: -3px 3px 5px #5C6BC0;
+}
+.bs-example-tabs >.nav-tabs > li{
+    float: none;
+}
+.bs-example-tabs >.nav-tabs > li>a{
+    color: rgba(0, 0, 0,.5);
+}
+.glyphicon{
+    float: left;
+    margin-left: 5px;
+}
+.changeStyle{
+    border: none;
+    background-color: #5C6BC0;
+}
+/*内容主体左END*/
+
+/*内容主体右*/
+/*<!--首页-->*/
+/*<!--轮播图-->*/
+.contentRight{
+    width: 88%;
+    height: 100%;
+}
+.panel-default.btnBox{
+    border-radius: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding: 7px 0 7px 0;
+}
+.btn-success.btnAdd{
+    padding: 6px 47px 6px 25px;
+    margin-right: 45px;
+}
+.btn-danger.btnAdd{
+    padding: 6px 68px 6px 25px;
+    margin-right: 20px;
+}
+.navbar-default.homeNav{
+    background-color: #666666;
+    border-radius: 0;
+    border: none;
+    margin-bottom: 0;
+}
+.navbar-default.homeNav span{
+    display: inline-block;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+.navbar-default.homeNav .check{
+    text-align: center;
+}
+.navbar-default.homeNav .check input{
+    margin-right: 15px;
+}
+.homeContent{
+    background-color: #ffffff;
+}
+.homeContentItem {
+    border-bottom: 1px solid #C1C3C6;
+    padding-bottom: 15px;
+}
+.homeContentItem div{
+    margin-top: 15px;
+    line-height: 97px;
+    text-align: center;
+}
+
+/*<!--滚动消息-->*/
+.rollContentItem{
+    border-bottom: 1px solid #C1C3C6;
+    padding: 15px 0 15px 0;
+    text-align: center;
+    height: 100%;
+}
+.rollContentItem >div{
+    line-height: 97px;
+}
+.rollContentItem >span{
+    margin-top: 30px;
+}
+.rollContentItem .competitiveCheck input{
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: -70px;
+}
+
+/*<!--限时抢购-->*/
+.LimitContent .btn-success.btnAdd{
+    padding: 6px 68px 6px 25px;
+}
+
+.limitBottomNav span{
+    line-height: 78px;
+    margin:0 10px 0 10px;
+}
+
+.limitBottomNav .pageIn input{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+.limitBottomNav .pageBtn button{
+    width: 50px;
+    height: 20px;
+    line-height:0;
+    margin: 0;
+}
+.limitBottomNav .pagination span{
+    line-height: 0;
+    margin: 0;
+}
+
+/*<!--精品推荐-->*/
+.competitiveCheck{
+    height: 50px;
+    text-align: center;
+}
+.competitiveCheck .checks{
+    display: inline-block;
+    margin: 18px -75px 0 0;
+}
+
+/*内容管理*/
+/*搜索推荐*/
+.searchContent{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 20px;
+    text-align: center;
+}
+.searchContent textarea{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color:#666666 ;
+}
+
+
+/*促销管理*/
+/*优惠券*/
+.rollContentItem>div {
+    line-height: 20px;
+}
+.rollContentItem>div >span{
+    line-height: 50px;
+}
+.rollContentItem .competitiveCheck input {
+    margin-top: 20px;
+}
+

@@ -1,0 +1,248 @@
+<!--商家审核-->
+<link rel="stylesheet" href="/stylesheets/business.css">
+<div  ng-controller="businessCheck">
+    <div ng-show="BUsInfo==true">
+        <div class="panel panel-default btnBox">
+            <div class="panel-body clearfix">
+
+                <select ng-model="current_option" ng-options="option.key for option in option_array" ng-change="change(current_option)"></select>
+
+                <div class="busSearch pull-right">
+                    <div class="col-lg-6 pull-right searchContainer">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="输入要查找的账号">
+                            <span class="input-group-btn">
+        <button class="btn btn-default searchBtn" type="button" ng-click="searchInfo()"><span
+                class="glyphicon glyphicon-search"></span></button>
+      </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-default homeNav">
+            <span class="col-xs-1 col-sm-1 col-md-1">序号</span>
+            <span class="col-xs-2 col-sm-2 col-md-2">申请账号地址</span>
+            <span class="col-xs-3 col-sm-3 col-md-3">申请提交时间</span>
+            <span class="col-xs-2 col-sm-2 col-md-2">审批状态</span>
+            <span class="col-xs-4 col-sm-4 col-md-4">操作</span>
+        </div>
+        <div class="homeContent" style="min-height: 640px">
+            <div class="homeContentItem busItme clearfix" ng-repeat="Bus in BusIn">
+                <div class="col-xs-1 col-sm-1 col-md-1" ng-bind="Bus.id"></div>
+                <div class="col-xs-2 col-sm-2 col-md-2" ng-bind="Bus.name"></div>
+                <div class="col-xs-3 col-sm-3 col-md-3" ng-bind="Bus.time"></div>
+                <div class="col-xs-2 col-sm-2 col-md-2">
+                    <p ng-bind="Bus.type" class="type"></p>
+                    <p class="detail"><span ng-bind="Bus.msg"></span></p>
+                    <p ng-bind="Bus.typeTack" class="typeTack"></p>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4">
+                    <button type="button" class="btn btn-default
+                             showBusInfoBtn" ng-click="MRShowInfo()">查看资料
+                    </button>
+                    <a href="/v0.0.1/user/admin/BusinessInfo/download" class="btn btn-default">一键下载</a>
+                    <button type="button" class="btn btn-danger check" data-toggle="modal"
+                            data-target="#myModal" ng-click="recordIndex()">审批
+                    </button>
+                </div>
+
+                <!--弹出框-->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+                     aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">商家审批</h4>
+                            </div>
+                            <div class="modal-body" id="msg1">
+                                <textarea cols="90"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal"
+                                        ng-click="refuse()">拒绝通过
+                                </button>
+                                <button type="button" class="btn btn-primary permitBtn" data-dismiss="modal"
+                                        ng-click="permit()">审批通过
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--底部分页-->
+        <div class="clear clearfix">
+            <div class="M-box3 pull-right"></div>
+        </div>
+    </div>
+
+    <!--载入层-->
+    <div class="cover clearfix">
+        <div class="lodingView">
+            <img src="/images/loding.gif" alt="">
+            <p>Loding...</p>
+        </div>
+    </div>
+
+    <!--商家信息1-->
+    <div class="BUsInfo" ng-show="BUsInfo1==true">
+        <div class="panel panel-default btnBox">
+            <div class="panel-body clearfix">
+                申请账号: <span ng-bind="BusInform.name"></span> &nbsp; &nbsp; &nbsp;提交时间: <span ng-bind="BusInform.time"></span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-success
+                             showBusInfoBtn" ng-click="back()">返回
+                    </button>
+                    <a href="/get/download" class="btn btn-default bDownload">一键下载</a>
+                    <button type="button" class="btn btn-danger check" data-toggle="modal"
+                            data-target="#BUsInfoView" id="checkBtn1">审批
+                    </button>
+                </div>
+
+            </div>
+            <!--弹出框-->
+            <div class="modal fade" id="BUsInfoView" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="BUsInfoViewLabel">商家审批</h4>
+                        </div>
+                        <div class="modal-body">
+                            <textarea cols="90" rows="10"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    ng-click="infoRefuse()">拒绝通过
+                            </button>
+                            <button type="button" class="btn btn-primary permitBtn" data-dismiss="modal"
+                                    ng-click="infoPermit()">审批通过
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-default homeNav search">
+            <span class="col-xs-12 col-sm-12 col-md-12">申请材料</span>
+        </div>
+        <div class="homeContent busInfoCell clearfix">
+            <div class="busInfoLeft">
+                <div class="tipOne">
+                    <p>1.营业执照</p>
+                    <p>要求：必须具有法人资格；确保未在企业经营异常名录中且所售商品属于经营范围内；三证合一：营、税、组。</p>
+                    <p><input type="checkbox" class="checkbox" ng-model="check">&nbsp;&nbsp;&nbsp;三证合一</p>
+                    <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                </div>
+                <div class="tipFive">
+                    <p>5.特殊行业还需对应生产经营许可证</p>
+                    <p>
+                        食品类的：食品流通许可证；药品：药品经营许可证；保健品：保健品经营许可证；化妆品：卫生许可证。
+                        有相关质检报告书的尽量提供过来
+                    </p>
+                    <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                    <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                </div>
+
+            </div>
+            <div class="busInfoRight" ng-hide="check">
+                <div class="registration">
+                    <div class="tipTwo">
+                        <p>2.税务登记</p>
+                        <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                    </div>
+                    <div class="tipThree">
+                        <p>3.组织机构代码</p>
+                        <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                    </div>
+                </div>
+                <div class="chop">
+                    <p>4.商标证(授权代理或授权销售证书)</p>
+                    <p>
+                        要求：由国家商标总局颁发的商标注册证或商标注册申请受理通知书复印件
+                        （若办理过变更、转让、续展，请一并提供商标总局颁发的变更、转让、续展证明或受理通知书）;
+                        若无则提供品牌承诺函
+                    </p>
+                    <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--商家信息2-->
+    <div class="BUsInfo" ng-show="BUsInfo2">
+        <div class="panel panel-default btnBox">
+            <div class="panel-body clearfix">
+                申请账号: <span ng-bind="BusInform.name"></span> &nbsp; &nbsp; &nbsp;提交时间: <span ng-bind="BusInform.time"></span>
+                <div class="pull-right">
+                    <button type="button" class="btn btn-success
+                             showBusInfoBtn" ng-click="back()">返回
+                    </button>
+                    <a href="/get/download" class="btn btn-default bDownload">一键下载</a>
+                    <button type="button" class="btn btn-danger check" data-toggle="modal"
+                            data-target="#BUsInfoView" id="checkBtn2">审批
+                    </button>
+                </div>
+
+            </div>
+            <!--弹出框-->
+            <div class="modal fade" id="BUsInfoView" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="BUsInfoViewLabel">商家审批</h4>
+                        </div>
+                        <div class="modal-body">
+                            <textarea cols="90" rows="10"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    ng-click="infoRefuse()">拒绝通过
+                            </button>
+                            <button type="button" class="btn btn-primary permitBtn" data-dismiss="modal"
+                                    ng-click="infoPermit()">审批通过
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-default homeNav search">
+            <span class="col-xs-12 col-sm-12 col-md-12">申请材料</span>
+        </div>
+        <div class="homeContent busInfoCellTwo clearfix">
+            <div class="idCard">
+                <p>1.身份证</p>
+                <p>要求:提供清晰的身份证正面以及反面照片</p>
+                <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+                <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+            </div>
+            <div class="bankInfo">
+                <p>2.开户银行许可证</p>
+                <p>若使用个人账户请在下面方框内勾选，若使用对公账户则无需勾选）</p>
+                <p>
+                    <input type="checkbox" id="protocol">&nbsp;&nbsp;
+                    下面银行账户为本人有效账号。用于与抠抠(福建）电子商务有限公司之间的资金结算。
+                    本人愿承担使用该账户结算可能产生的风险与责任。
+                </p>
+                <img src="/images/bgGoodIcon.png" alt="点击图片放大">
+            </div>
+            <div class="phoneNumber">
+                <p>3.实名认证手机号</p>
+                <input type="text" class="form-control phone" disabled="disabled">
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+<!--商家审核END-->

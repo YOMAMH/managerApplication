@@ -1,0 +1,57 @@
+<!--精品推荐-->
+<div>
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <input type="button" value="添加" class="btn btn-success btnAdd pull-right" ng-click="pop()">
+            <input type="button" value="批量删除" class="btn btn-danger btnAdd pull-right" ng-click="pop()">
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input class="checks" type="checkbox">
+        </div>
+        <span class="col-xs-2 col-sm-2 col-md-2">图片</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">商品ID</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">商品标题</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">价格（￥）</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">店铺</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">操作</span>
+    </div>
+    <div class="homeContent">
+        <div class="rollContentItem clearfix" ng-repeat="cf in CarouselFigure">
+            <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input type="checkbox"></div>
+            <div class="col-xs-2 col-sm-2 col-md-2"><img src="/images/bgGoodIcon.png" alt=""></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>874368</span></div>
+            <div class="col-xs-3 col-sm-3 col-md-3"><span>连城白鸭蛋30个</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>20.00</span></div>
+            <div class="col-xs-3 col-sm-3 col-md-3"><span>步步高合作社</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>操作</span></div>
+        </div>
+        <div class="limitBottomNav clearfix">
+                            <span class="pull-right pageBtn"><button type="button"
+                                                                     class="btn btn-default">确定</button></span>
+            <span class="pull-right pageIn">到第<input type="text">页</span>
+            <span class="pull-right">共11页</span>
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="pull-right">共111条数据</span>
+
+        </div>
+    </div>
+</div>

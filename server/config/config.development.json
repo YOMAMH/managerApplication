@@ -1,0 +1,9 @@
+{
+  "port": 3002,
+
+  "host": "192.168.1.90",
+  "database": "v6_kouclo_app",
+  "dialect": "mysql",
+  "username": "koucl",
+  "password": "koUclo#%!"
+}

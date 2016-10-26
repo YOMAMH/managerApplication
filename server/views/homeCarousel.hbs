@@ -1,0 +1,23 @@
+<!--轮播图-->
+<div ng-controller="homeCarousel">
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <input type="button" value="添加" class="btn btn-success btnAdd pull-right" ng-click="pop()">
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <span class="col-xs-2 col-sm-2 col-md-2">图片</span>
+        <span class="col-xs-5 col-sm-5 col-md-5">链接地址/ID</span>
+        <span class="col-xs-3 col-sm-3 col-md-3">排序</span>
+        <span class="col-xs-2 col-sm-2 col-md-2">操作</span>
+    </div>
+    <div class="homeContent">
+        <div class="homeContentItem clearfix" ng-repeat="cf in CarouselFigure">
+            <div class="col-xs-2 col-sm-2 col-md-2"><img src="/images/bg_home_prdcouctIcon.png" alt="">
+            </div>
+            <div class="col-xs-5 col-sm-5 col-md-5">http://www.oomall.com/</div>
+            <div class="col-xs-3 col-sm-3 col-md-3">排序</div>
+            <div class="col-xs-2 col-sm-2 col-md-2">操作</div>
+        </div>
+    </div>
+</div>

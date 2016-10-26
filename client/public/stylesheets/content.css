@@ -1,0 +1,90 @@
+/*类目管理*/
+.btn.btnClassAdd{
+    padding: 0 90px 0 10px;
+}
+.btn.btnClassAdd.btnClassAddTwo,.btn.btnClassAdd.btnClassAddThree,.btn.btnClassAdd.addBtnClassThree,.btn.btnClassAdd.addBtnClassTwo{
+    float: none;
+    height: 30px;
+    text-align: center;
+}
+.oneClassTittle{
+    width: 200px;
+    margin: 10px;
+    height: 30px;
+}
+.typeContentItem{
+    -webkit-border-bottom: 1px solid #C1C3C6;
+    -moz-border-bottom: 1px solid #C1C3C6;
+    -ms-border-bottom: 1px solid #C1C3C6;
+    -o-border-bottom: 1px solid #C1C3C6;
+    border-bottom: 1px solid #C1C3C6;
+}
+.typeContentItem >div{
+    text-align: center;
+    line-height: 50px;
+}
+.typeContentItem .glyphicon.tag{
+    top: 17px;;
+}
+.typeContentItem .col-xs-5.twoTitle{
+    padding-left: 35px;
+    text-align: left;
+}
+.typeContentItem .col-xs-5.threeTitle{
+    padding-left: 65px;
+    text-align: left;
+}
+.typeContentItem .col-xs-5.addThreeTitle{
+    padding-left: 75px;
+    text-align: left;
+}
+.typeContentOne,.typeContentOneAdd{
+    -webkit-border-top:1px solid #C1C3C6;
+    -moz-border-top:1px solid #C1C3C6;
+    -ms-border-top:1px solid #C1C3C6;
+    -o-border-top:1px solid #C1C3C6;
+    border-top:1px solid #C1C3C6;
+    -webkit-border-bottom: 1px solid #C1C3C6;
+    -moz-border-bottom: 1px solid #C1C3C6;
+    -ms-border-bottom: 1px solid #C1C3C6;
+    -o-border-bottom: 1px solid #C1C3C6;
+    border-bottom: 1px solid #C1C3C6;
+}
+.typeContentTwo{
+    -webkit-border-top:1px solid #C1C3C6;
+    -moz-border-top:1px solid #C1C3C6;
+    -ms-border-top:1px solid #C1C3C6;
+    -o-border-top:1px solid #C1C3C6;
+    border-top:1px solid #C1C3C6;
+}
+.typeContentTwo input[type="text"]{
+    margin-left: 10px;
+}
+.typeContentThree{
+    -webkit-border-top:1px solid #C1C3C6;
+    -moz-border-top:1px solid #C1C3C6;
+    -ms-border-top:1px solid #C1C3C6;
+    -o-border-top:1px solid #C1C3C6;
+    border-top:1px solid #C1C3C6;
+    z-index: 10;
+}
+.typeContentItem .oneClassIn,.typeContentItem .twoClassIn,.typeContentItem .threeClassIn{
+    width: 200px;
+    height: 30px;
+    margin-top: 8px;
+    text-align: left;
+}
+.btnSave{
+    padding: 0 70px 0 40px;
+}
+.contentManage .homeContent>.typeContentItem {
+    min-height: 545px;
+}
+
+.disableStyleOne{
+    background-color: #D3D3D3;
+    color: #A9A9A9;
+}
+.disableStyleOne a {
+    color: #A9A9A9;
+}

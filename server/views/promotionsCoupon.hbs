@@ -1,0 +1,63 @@
+<!--优惠券-->
+<div>
+    <div class="panel panel-default btnBox">
+        <div class="panel-body clearfix">
+            <input type="button" value="创建优惠券" class="btn btn-success btnAdd pull-right"
+                   ng-click="pop()">
+            <input type="button" value="批量删除" class="btn btn-danger btnAdd pull-right" ng-click="pop()">
+        </div>
+    </div>
+    <div class="navbar navbar-default homeNav">
+        <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input class="checks" type="checkbox">
+        </div>
+        <span class="col-xs-1 col-sm-1 col-md-1">名称</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">面值</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">限领/人</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">发行量</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">已领取</span>
+        <span class="col-xs-4 col-sm-4 col-md-4">有效期</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">状态</span>
+        <span class="col-xs-1 col-sm-1 col-md-1">操作</span>
+    </div>
+    <div class="homeContent">
+        <div class="rollContentItem clearfix" ng-repeat="cf in CarouselFigure">
+            <div class="col-xs-1 col-sm-1 col-md-1 competitiveCheck"><input type="checkbox"></div>
+            <div><span class="col-xs-1 col-sm-1 col-md-1">4周年</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>3.00/100.0</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>4</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>201</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>620</span></div>
+            <div class="col-xs-4 col-sm-4 col-md-4"><p>起：2016-07-20 16:00 <br> 止：2016-08-31 19:00</p>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>进行中</span></div>
+            <div class="col-xs-1 col-sm-1 col-md-1"><span>操作</span></div>
+        </div>
+        <div class="limitBottomNav clearfix">
+                            <span class="pull-right pageBtn"><button type="button"
+                                                                     class="btn btn-default">确定</button></span>
+            <span class="pull-right pageIn">到第<input type="text">页</span>
+            <span class="pull-right">共11页</span>
+            <div class="pull-right">
+                <ul class="pagination">
+                    <li>
+                        <a href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li>
+                        <a href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <span class="pull-right">共111条数据</span>
+
+        </div>
+    </div>
+</div>
