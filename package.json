@@ -35,5 +35,21 @@
     "sequelize": "^3.24.3",
     "serve-favicon": "~2.3.0",
     "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-jshint": "^2.0.2",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-ngmin": "^0.3.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
   }
 }

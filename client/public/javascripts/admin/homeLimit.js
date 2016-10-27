@@ -3,6 +3,6 @@
  */
 app.controller('homeLimit',['$scope','$http',function ($scope,$http) {
     $scope.pop = function () {
-        alert(111);
+        alert(222);
     }
 }]);

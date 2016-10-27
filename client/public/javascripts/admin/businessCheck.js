@@ -134,7 +134,7 @@ app.controller('businessCheck',['$scope','$http',function ($scope,$http) {
     });
 
     //查找账号
-    $scope.searchInfo = ()=>{
+    $scope.searchInfo = function () {
         var queryStr =  $('.input-group >.form-control').val();
         getBusinessInfo(queryStr,0,'name');
         getTotalePages('name',queryStr);
