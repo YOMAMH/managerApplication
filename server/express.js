@@ -31,7 +31,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, '../client/public')));
 app.use(express.static(path.join(__dirname, '../client/bower_components')));
-app.use('/'+config.version+'/user/admin/login',express.static(path.join(__dirname, '../client/static')));
+app.use('/user/admin/login',express.static(path.join(__dirname, '../client/static')));
 
 app.use(function (req, res, next) {
     function send(data) {

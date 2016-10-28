@@ -15,7 +15,7 @@ module.exports = function(app) {
         next();
     });
   // Insert routes below
-  app.use('/'+config.version+'/user',require("./controller/user"));
+  app.use('/',require("./controller/user"));
   app.use('/admin',require("./controller/admin"));
 
 

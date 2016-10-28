@@ -2,13 +2,4 @@ node_modules
 client/bower_components
 npm-debug.log
 client/public/gulpFile.js
-client/public/gulpFile.js
-client/public/javascripts/admin/administerContent.js
-client/public/javascripts/admin/contentType.js
-client/public/javascripts/admin/homeFloor.js
-client/public/javascripts/admin/administerNav.js
-client/public/javascripts/admin/homeCarousel.js
-client/public/javascripts/admin/homeLimit.js
-client/public/javascripts/admin/businessCheck.js
-client/public/javascripts/admin/homeCompetitive.js
-client/public/javascripts/admin/homeRoll.js
+client/public/javascripts/adminJs

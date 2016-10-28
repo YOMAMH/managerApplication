@@ -24,7 +24,7 @@
         if(req.session.user&&req.session.pwd){
             res.render('mainPage',{user: req.session.userName});
           }else {
-            res.redirect('/' + config.version + '/user/admin/login');
+            res.redirect( '/user/admin/login');
           }
     },
 
@@ -54,7 +54,7 @@
       req.session.userName = null;
       req.session.user = null;
       req.session.pwd = null;
-      res.redirect('/'+config.version+'/user/admin/login');
+      res.redirect('/user/admin/login');
     },
 
     //下载商户信息

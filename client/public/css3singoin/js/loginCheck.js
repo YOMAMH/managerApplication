@@ -9,7 +9,7 @@ $(function () {
         var password = $.trim($('#password').val());
         //登陆验证
         $.ajax({
-            url:'/v0.0.1/user/admin/checkUser',
+            url:'/admin/checkUser',
             type:'POST',
             timeout:3000,
             data:{userName:userName,pwd:password},
@@ -64,7 +64,7 @@ $(function () {
                     setTimeout(function () {
                         $('.success').fadeOut();
                         //验证session
-                        location.href='/v0.0.1/user/admin';
+                        location.href='/';
                     }, 2800);
                 }
 
